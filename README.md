@@ -1,6 +1,6 @@
 # backbase_temp
 
-Manaul Regression Testing:
+Manual Regression Testing:
 
 Manual regression tests written to establish that functionality is as expected. Coverage is limited to those I deemed to be of highest priority based on my own exploration of the application.
 
@@ -12,7 +12,7 @@ Automation:
 
 I automated most of the manual tests written, with those omitted typically due to time constraints. Typically I'd automate as much as possible to minimize on the number of manual tests required. I appreciate that there are such things as over saturated automation suites, which can result in excessive run time and maintenance, however, this is something that needs to be handled separately.
 
-I've made an asusmption that no thorough instructions are needed to execute the automation (if you even intend to do so). Regardless I've added a few lines to a readme in the directory anyway.
+I've made an assumptions that no thorough instructions are needed to execute the automation (if you even intend to do so). Regardless I've added a few lines to a readme in the directory anyway.
 
 Not Covered:
 
