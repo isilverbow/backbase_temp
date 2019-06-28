@@ -1,4 +1,5 @@
 When("I select to delete the computer") do
+  # Open the applicable record (by finding the computer name in the table)
   all('td').select {|cell| cell.text == @table['Computer name']}.first.find('a').click
 
   click_button("Delete this computer")

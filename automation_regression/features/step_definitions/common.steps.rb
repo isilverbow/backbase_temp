@@ -1,6 +1,8 @@
 Given("I am on the database page") do
+  # Go to the below URL
   visit("https://computer-database.herokuapp.com/computers")
 
+  # Check that the page header appears / validate we're on the right page
   expect(Common.new.page_title.text).to match(/\d+ computers found/)
 end
 

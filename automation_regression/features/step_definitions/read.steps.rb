@@ -17,7 +17,8 @@ Then("I expect the table content to be valid") do
 end
 
 def validate_date(this)
- # Given time, I'd likely replace that hyphen with an empty value
+  # The hyphen record represents a blank row
+  # Given time, I'd likely replace that hyphen with an empty value
   return if this == "-"
 
   # Convert date to a recognized format
@@ -29,10 +30,12 @@ end
 Given("I make note of the number of computers found") do
   @read ||= Read.new
 
+  # Read the header string and return the numbers only
   @computers_found = @read.header.text.scan(/\d/).join('')
 end
 
 Given("I make note of the number of computers in the table") do
+  # Read the table record count string and return the numbers only
   @computers_in_table = @read.table_count.text.scan(/\d+$/).join('')
 end
 

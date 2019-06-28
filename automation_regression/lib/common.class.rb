@@ -5,7 +5,10 @@ class Common < SitePrism::Page
   element :submit_search, '#searchsubmit'
 
   def filter_by(data)
+    # Set the variable to the input field
     filter_input.set(data)
+
+    # Click search
     submit_search.click
   end
 end

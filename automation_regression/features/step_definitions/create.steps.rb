@@ -1,6 +1,7 @@
 When("I go to add a new computer") do
   click_link("Add a new computer")
 
+  # Initiate the class
   @common = Common.new
 
   expect(@common.page_title.text).to eq("Add a computer")
@@ -27,6 +28,7 @@ end
 Then("I expect to see a validation error for {string}") do |error_type|
   @create ||= Create.new
 
+  # Run the assertion by interpolating the error_type argument passed through
   expect(@create.__send__("#{error_type.downcase.gsub(" ", "_")}_error").visible?).to eq(true)
 
   # Alternatively..

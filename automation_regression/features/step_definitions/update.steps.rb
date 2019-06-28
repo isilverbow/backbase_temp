@@ -17,13 +17,14 @@ end
 Then("I expect the computer details to be updated accordingly") do
   res = Read.new.map_current_page.first
 
-  # Normalise date to be a single format
+  # Normalise date to be a single format, so they can be directly compared
   introduced_date = normalise_date(res['Introduced'])
   discontinued_date = normalise_date(res['Discontinued'])
 
-  expect(res['Computer name']).to eq(@table['Computer name'])
   expect(introduced_date).to eq(@table['Introduced date'])
   expect(discontinued_date).to eq(@table['Discontinued date'])
+
+  expect(res['Computer name']).to eq(@table['Computer name'])
   expect(res['Company']).to eq(@table['Company'])
 end
 
